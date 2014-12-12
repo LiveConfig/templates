@@ -1,0 +1,211 @@
+@charset "utf-8";
+/*  _    _          ___           __ _     (R)
+ * | |  (_)_ _____ / __|___ _ _  / _(_)__ _
+ * | |__| \ V / -_) (__/ _ \ ' \|  _| / _` |
+ * |____|_|\_/\___|\___\___/_||_|_| |_\__, |
+ *                                    |___/
+ * Copyright (c) 2009-2014 Keppler IT GmbH.
+ * ---------------------------------------------------------------------------
+ * $Id: style-rtl.css 3312 2014-12-11 15:25:25Z kk $
+ *
+ * HTML5 design template - right to left
+ * ---------------------------------------------------------------------------
+ */
+
+body {
+	background:url(bg-rtl.png) repeat-y right 0px;
+}
+
+/* ------------------------------------------------------------------------
+ * Header
+ * ------------------------------------------------------------------------ */
+body > header > img { right:5px; }
+
+body > header > div.userInfo {
+	right:auto;
+	left:30px;
+}
+
+body > header > div.userInfo > div.rUser {
+	float:right;
+	margin-left:8px;
+	margin-right:0px;
+}
+
+/* ------------------------------------------------------------------------
+ * Main navigation
+ * ------------------------------------------------------------------------ */
+body > nav {
+	float:right;
+}
+
+body > nav > ul > li > span {
+	padding-left:0px;
+	padding-right:8px;
+}
+
+body > nav > ul > li > ul > li {
+	padding-left:0px;
+	padding-right:30px;
+}
+
+li.ico > a:before {
+	right:8px;
+}
+
+/* ------------------------------------------------------------------------
+ * Sub-navigation
+ * ------------------------------------------------------------------------ */
+nav.subnav > ul {
+	margin-right:0px;
+	margin-left:-10px;
+}
+
+nav.subnav > ul > li {
+	display:inline-block;
+	position:relative;
+	top:-12px;
+	border-top:1px solid #BBBBBB;
+	border-bottom:1px solid #BBBBBB;
+	border-right:0;
+	border-left:1px solid #BBBBBB;
+}
+
+nav.subnav > ul > li:first-child {
+	-webkit-border-top-left-radius: 0;
+	-moz-border-top-left-radius: 0;
+	border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-bottom-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-right:1px solid #BBBBBB;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-top-right-radius: 3px;
+	border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-bottom-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+nav.subnav > ul > li:last-child {
+	-webkit-border-top-right-radius: 0;
+	-moz-border-top-right-radius: 0;
+	border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-bottom-right-radius: 0;
+	border-bottom-right-radius: 0;
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-top-left-radius: 3px;
+	border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-bottom-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+nav.subnav > ul > li > a {
+	display:inline-block;
+	text-decoration:none;
+	color:#464646;
+	padding:2px 6px;
+}
+
+nav.subnav > ul > li.ico > a {
+	padding-left:6px;
+	padding-right:26px;
+}
+
+/* ------------------------------------------------------------------------
+ * Content area
+ * ------------------------------------------------------------------------ */
+body > section {
+	margin-left:0px;
+	margin-right:175px;
+}
+
+/* ------------------------------------------------------------------------
+ * Page footer
+ * ------------------------------------------------------------------------ */
+body > footer {
+	margin-right:185px;
+	margin-left:10px;
+	text-align:left;
+}
+
+/* ------------------------------------------------------------------------
+ * Buttons
+ * ------------------------------------------------------------------------ */
+a.button.ico {
+	padding-right:24px;
+	padding-left:5px;
+}
+
+/*
+a.button.ico:before {
+	position:absolute;
+	right:4px;
+	margin-left:-16px;
+	margin-right:0px;
+}
+*/
+a.button.ico:before {
+	content:none;
+}
+
+a.button.ico:after {
+	content:" ";
+	background:url(btn.png);
+/*
+	position:absolute;
+	left:5px;
+	top:2px;
+*/
+	display:inline-block;
+	position:relative;
+	right:-19px;
+	top:3px;
+	margin-left:-16px;
+	height:16px;
+	width:16px;
+}
+
+a.button.icoOK.ico:after { background-position:0px 0px; }
+a.button.icoDelete.ico:after { background-position:-16px 0px; }
+a.button.icoManage.ico:after { background-position:-32px 0px; }
+a.button.icoPassword.ico:after { background-position:-48px 0px; }
+a.button.icoCancel.ico:after { background-position:0px -16px; }
+a.button.icoRegenerate.ico:after { background-position:-16px -16px; }
+a.button.icoIdea.ico:after { background-position:-32px -16px; }
+a.button.icoNewPassword.ico:after { background-position:-48px -16px; }
+a.button.icoAdd.ico:after { background-position:0px -32px; }
+a.button.icoStart.ico:after { background-position:-16px -32px; }
+a.button.icoEdit.ico:after { background-position:-32px -32px; }
+a.button.icoDownload.ico:after { background-position:-48px -32px; }
+a.button.icoRemove.ico:after { background-position:0px -48px; }
+a.button.icoUpload.ico:after { background-position:-16px -48px; }
+a.button.icoDoc.ico:after { background-position:-32px -48px; }
+
+/* ------------------------------------------------------------------------
+ * Tables
+ * ------------------------------------------------------------------------ */
+
+div.dTableNav {
+	float:left;
+}
+
+div.dTableData {
+	clear:left;
+}
+
+div.dTableData > table > thead > tr > th {
+	text-align:right;
+}
+
+div.dTableData > table > thead > tr > th.sort:after {
+	float:left;
+	color:#999999;
+	width:10px;
+	margin-right:-10px;
+}
+
+
+/* <EOF> ------------------------------------------------------------------ */

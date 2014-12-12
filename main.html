@@ -1,0 +1,629 @@
+<!DOCTYPE HTML>
+<!--_    _          ___           __ _     (R)
+   | |  (_)_ _____ / __|___ _ _  / _(_)__ _
+   | |__| \ V / -_) (__/ _ \ ' \|  _| / _` |
+   |____|_|\_/\___|\___\___/_||_|_| |_\__, |
+                                      |___/
+   Copyright (c) 2009-2014 Keppler IT GmbH.
+   $Id: main.html 3314 2014-12-11 17:49:56Z kk $
+ 
+   HTML5 design template
+-->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- <meta name="viewport" content="width=960px, initial-scale=0.25"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[LiveConfig] HTML5 design template</title>
+    <link rel="shortcut icon" href="default/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="default/style.css">
+<!-- only presented when user-agent contains 'Apple': -->
+    <link rel="apple-touch-icon" href="imgs/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" href="imgs/apple-touch-icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="imgs/apple-touch-icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="imgs/apple-touch-icon-144x144.png" sizes="144x144">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="LiveConfig">
+<!-- / -->
+    <script src="../../resources/sources/jquery-1.11.1.js"></script>
+    <script src="../../resources/sources/raphael-2.1.2.js"></script>
+    <script src="../../resources/sources/pie.js"></script>
+    <script src="../../resources/sources/apg.js"></script>
+    <script src="../../resources/sources/liveconfig.js"></script>
+<!--
+    <script src="lib/liveconfig.min.js"></script>
+-->
+    <!--[if lt IE 9]>
+    <script src="lib/html5.js"></script>
+    <link rel="stylesheet" type="text/css" href="default/style-ie.css">
+    <![endif]-->
+    <script src="default/style.js"></script>
+  </head>
+  <body>
+  <script type="text/javascript">
+    LC._lang='de';
+    $(function() {
+      $("#tab1").find('a:empty').text(' ');
+      var dl = {
+        'chkDep': [ 'value', 'valunit', 'chkDep2' ],
+        'chkDep2': [ 'inpDep3' ],
+        'change': [ 'phpmax' ]
+      };
+      $('#frmPHP').lcFormValidator( { manageSubmit:true, dependencies: dl, matchPasswords: [ 'p1', 'p2' ] } );
+    });
+  </script>
+  <div><!--Wrapper-->
+    <header>
+      <img src="imgs/logo-head.png" width="281" height="50" alt="LiveConfig®">
+      <div class="userInfo">
+        <div class="rUser">
+          Admin-Sitzung:<br>
+          <span class="userName">System Administrator</span><br>
+        </div>
+        <div class="eUser">
+          Angemeldet:<br>
+          <span class="userName">Manfred Mustermann</span><br>
+          <button class="small ico icoLogout" type="button" onclick="LC.session.logout();return false;">abmelden</button>
+        </div>
+      </div>
+      <div id="topinfo">Platz für aktuelle Informationen</div>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <span>Verwaltung</span>
+          <ul>
+            <li class="ico icoHome"><a href="#">Übersicht</a></li>
+            <li class="ico icoSettings active"><a href="#">Einstellungen</a></li>
+            <li class="ico icoUsers"><a href="#">Benutzer</a></li>
+            <li class="ico icoLiveConfig"><a href="#">LiveConfig</a></li>
+            <li class="ico icoCustomers"><a href="#">Kunden</a></li>
+            <li class="ico icoReports"><a href="#">Berichte</a></li>
+          </ul>
+        </li>
+        <li>
+          <span>Hosting</span>
+          <ul>
+            <li class="ico icoPlans"><a href="#">Angebote</a></li>
+            <li class="ico icoMyHosting"><a href="#">Mein Hosting</a></li>
+            <li class="ico icoWebspace"><a href="#">Webspace</a></li>
+            <li class="ico icoDomains"><a href="#">Domains</a></li>
+            <li class="ico icoMail"><a href="#">E-Mail</a></li>
+            <li class="ico icoDB"><a href="#">Datenbanken</a></li>
+            <li class="ico icoCron"><a href="#">Cron-Jobs</a></li>
+            <li class="ico icoApps"><a href="#">Anwendungen</a></li>
+            <li class="ico icoSSL"><a href="#">SSL-Zertifikate</a></li>
+            <li class="ico icoPHP"><a href="#">PHP-Einstellungen</a></li>
+          </ul>
+        </li>
+        <li>
+          <span>Server</span>
+          <ul>
+            <li class="ico icoServers"><a href="#">Serververwaltung</a></li>
+            <li class="ico icoDNS"><a href="#">DNS-Verwaltung</a></li>
+          </ul>
+        </li>
+        <li>
+          <span>Suche</span>
+          <form class="frmSearch" method="post" action="#">
+            <input type="hidden" name="id" value="#">
+            <input type="search" name="s" placeholder="Suchbegriff" value="" maxlength="50" accesskey="s">
+            <input type="submit" name="submit" value="">
+          </form>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <h1>Einstellungen</h1>
+      <nav class="subnav">
+        <ul>
+          <li class="ico icoReports active"><a href="#">Übersicht</a></li>
+          <li class="ico icoMyHosting"><a href="#">Verträge</a></li>
+          <li class="ico icoDomains"><a href="#">Domains</a></li>
+        </ul>
+      </nav>
+
+      <h2>Zwischenüberschrift</h2>
+
+          <div class="dSubscriptionHead">
+            <table class="tabSimple">
+              <tr>
+                <th>Vertrag</th>
+                <th colspan="3">Domains</th>
+                <th colspan="3">Subdomains</th>
+                <th colspan="3">Ext. Domains</th>
+              </tr>
+              <tr>
+                <td>web9</td>
+                <td class="right">1</td>
+                <td></td>
+                <td></td>
+                <td class="right">0</td>
+                <td class="bright">(max. 50)</td>
+                <td><div class="dFillBar"><div class="dFillBarContent green" style="width:38%;"></div></div></td>
+                <td class="right">0</td>
+                <td class="bright">(max. 50)</td>
+                <td><div class="dFillBar"><div class="dFillBarContent green" style="width:38%;"></div></div></td>
+              </tr>
+              <tr>
+                <td>web11</td>
+                <td class="right">1</td>
+                <td></td>
+                <td></td>
+                <td class="right">0</td>
+                <td class="bright">(max. 50)</td>
+                <td><div class="dFillBar"><div class="dFillBarContent green" style="width:38%;"></div></div></td>
+                <td class="right">0</td>
+                <td class="bright">(max. 50)</td>
+                <td><div class="dFillBar"><div class="dFillBarContent green" style="width:38%;"></div></div></td>
+              </tr>
+            </table>
+            <button type="button" class="ico icoAdd" onclick="var p=LC.popup.url(800,460,'Neue Subdomain', 'domains/edit?id=ZGmhZdYWuz4Qnq4.1AAvdhy2');">Neue Subdomain...</button> 
+            <button type="button" class="ico icoAdd" onclick="var p=LC.popup.url(550,250,'Externe Domain hinzufügen', 'domains/addext?id=ZGmhZdYWuz4Qnq4.1AAvdhy2');">Externe Domain...</button>
+          </div>
+
+      <div class="dTable" id="tab1">
+        <div class="dTableHead">
+          <div class="dTableSearch">
+            <input type="search" value="" placeholder="Suchbegriff">
+            <div class="icoSearch"></div>
+            <div class="icoClear"></div>
+          </div>
+          <div class="dTableNav">
+            <span>42 Ergebnisse</span>
+            <a href="#">&#x23ea;</a>
+            <a href="#">&#x25c0;</a>
+            <select>
+              <option>1-20</option>
+              <option>21-40</option>
+              <option>41-42</option>
+            </select>
+            <a href="#">&#x25b6;</a>
+            <a href="#">&#x23e9;</a>
+          </div>
+        </div>
+        <div class="dTableData">
+          <table id="tabCustomerList" class="clickable">
+            <thead>
+              <tr>
+                <th style="width:20px;"><input type="checkbox" name="chkAll" value="1"></th>
+                <th class="sortable">Kdnr.</th>
+                <th class="sort sortable">Name</th>
+                <th class="sortable">Firma</th>
+                <th class="sortable">Anschrift</th>
+                <th class="sortable">PLZ</th>
+                <th class="sortable">Stadt</th>
+                <th>Land</th>
+                <th>Fluß</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" name="chk123" value="1"></td>
+                <td>123</td>
+                <td class="sort">Mustermann, Manfred</td>
+                <td>Foobar Ltd.</td>
+                <td>Beispielallee 12-14</td>
+                <td>12345</td>
+                <td>Demohausen</td>
+                <td>Deutschland</td>
+                <td><div class="dFillBar" title="letzter Monat"></div></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="chk141" value="1"></td>
+                <td>141</td>
+                <td class="sort"><a href="#">Kirchheimer, Klara</a></td>
+                <td><a href="#"></a></td>
+                <td>Blumenweb 12</td>
+                <td>21324</td>
+                <td>Blütenstadt</td>
+                <td>Deutschland</td>
+                <td><div class="dFillBar" title="letzter Monat"></div></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="chk241" value="1"></td>
+                <td>241</td>
+                <td class="sort"><a href="#">Meier, Michael</a></td>
+                <td>Me &amp; more GmbH &amp; Co. KG</td>
+                <td>Gewerbegebiet 54</td>
+                <td>77654</td>
+                <td>Blubbingen</td>
+                <td>Deutschland</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><!--<input type="checkbox" name="chk241" value="1">--></td>
+                <td>241</td>
+                <td class="sort">Test, Kunde</td>
+                <td>παράδειγμα.δοκιμή</td>
+                <td>مثال.إختبار</td>
+                <td></td>
+                <td>उदाहरण.परीक्षा</td>
+                <td>Deutschland</td>
+                <td></td>
+              </tr>
+              <tr class="deleted">
+                <td><input type="checkbox" name="chk298" value="1"></td>
+                <td>298</td>
+                <td class="sort">Zottelmann, Agnes</td>
+                <td></td>
+                <td>Dorfweg 5</td>
+                <td>87654</td>
+                <td>Testgart</td>
+                <td>Deutschland</td>
+                <td><div class="dFillBar" title="letzter Monat"></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="dTableFooter">
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        var tab1 = new LC.AjaxTable('lib/dummy_ajaxtable_json.js', '#', '12345', null, null, 20);
+      </script>
+
+
+      <p>Daten bearbeiten: <button class="ico icoOK" href="#" onclick="var p = new LC.popup.window(300, 150, 'Test-Titel', false, null);return false;">Popup öffnen</button> Soll <i>nicht</i> als Link angezeigt werden: 217.81.154.31<br>
+      Lorem ipsum dolor sit... <button href="#" onclick="return false;">Test-Button</button>
+      </p>
+
+      <p><a href="https://www.liveconfig.com">LiveConfig</a></p>
+
+      <p>Buttons:
+        <button class="ico icoOK" href="#" onclick="return false;">icoOK</button>
+        <button class="ico icoDelete" href="#" onclick="return false;">icoDelete</button>
+        <button class="ico icoManage" href="#" onclick="return false;">icoManage</button>
+        <button class="ico icoPassword" href="#" onclick="return false;">icoPassword</button>
+        <button class="ico icoCancel" href="#" onclick="return false;">icoCancel</button>
+        <button class="ico icoRegenerate" href="#" onclick="return false;">icoRegenerate</button>
+        <button class="ico icoIdea" href="#" onclick="return false;">icoIdea</button>
+        <button class="ico icoNewPassword" href="#" onclick="return false;">icoNewPassword</button>
+        <button class="ico icoAdd" href="#" onclick="return false;">icoAdd</button>
+        <button class="ico icoStart" href="#" onclick="return false;">icoStart</button>
+        <button class="ico icoEdit" href="#" onclick="return false;">icoEdit</button>
+        <button class="ico icoDownload" href="#" onclick="return false;">icoDownload</button>
+        <button class="ico icoRemove" href="#" onclick="return false;">icoRemove</button>
+        <button class="ico icoUpload" href="#" onclick="return false;">icoUpload</button>
+        <button class="ico icoDoc" href="#" onclick="return false;">icoDoc</button>
+      </p>
+
+      <div class="dSelectCanvas">
+        <div>
+        <ul class="lcAjaxList">
+          <li class="active">Reseller 1G<br><span>1024 MB webspace, PHP, SSL</span></li>
+          <li>Test<br><span>200 MB webspace, PHP, CGI, SSL, Cron jobs, 2x MySQL</span></li>
+        </ul>
+        <button type="button" class="ico icoAdd">erstellen...</button>
+        </div>
+
+        <div class="dBoxCanvas">
+
+          <div class="dBox">
+            <h2>php.ini-Einstellungen</h2>
+            <form method="get" id="frmPHP" action="main.html" novalidate>
+              <fieldset>
+                <ol>
+                  <li>
+                    <label for="frm1_name">Name:</label>
+                    <input type="text" name="name" id="frm1_name" value="memory_limit" size="30" maxlength="64" required>
+                    <span class="dHelpIcon" onclick="LC.tooltip.show(this, 'mod_core/tutorial.resellersettings.userprefix');"></span>
+                  </li>
+                  <li>
+                    <label for="frm1_type">Typ:</label>
+                    <select name="type">
+                      <option>Zahl</option>
+                      <option>Zeichenkette</option>
+                      <option>Ja/Nein</option>
+                    </select>
+                  </li>
+                  <li>
+                    <label></label>
+                    <input type="checkbox" name="chkDep" id="chkDep" value="1"> Abhängigkeiten-Test<br>
+                    <input type="checkbox" name="chkDep2" id="chkDep2" value="1"> abhängig²<br>
+                    <input type="text" name="inpDep3" id="inpDep3" value="abc">
+                  </li>
+                  <li>
+                    <label for="frm1_value">Wert:</label>
+                    <input type="number" class="dig5" name="value" id="frm1_value" value="64" min="0" max="65535" size="5" maxlength="8" required>
+                    <select name="valunit">
+                      <option> </option>
+                      <option>K</option>
+                      <option selected="selected">M</option>
+                      <option>G</option>
+                    </select>
+                  </li>
+                  <li>
+                    <label for="frm1_change">Änderbar:</label>
+                    <select name="change" id="frm1_change">
+                      <option value="">nein</option>
+                      <option value="1">pro Vertrag</option>
+                      <option value="2">durch Kunden</option>
+                    </select>
+                  </li>
+                  <li>
+                    <label for="frm1_phpmin">PHP-Version:</label>
+                    ≥ <input type="text" name="phpmin" id="frm1_phpmin" value="5.2" size="4" maxlength="8" readonly>,
+                    &lt; <input type="text" name="phpmax" value="5.4" size="4" maxlength="8">
+                  </li>
+                  <script type="text/javascript">
+                    new LC.passwordFields( { 'value':'******', 'hidden':true, 'init':true, strPassword:'neues Passwort', names:['p1', 'p2'], minScore:5 } );
+                  </script>
+                </ol>
+              </fieldset>
+
+              <table class="tabBorder">
+                <tr>
+                  <th>Name:</th>
+                  <td>Name für die Anwendung</td>
+                </tr>
+                <tr>
+                  <th>Domain:</th>
+                  <td><select><option>blabla.de</option></select><br>
+                    Bitte wählen Sie die Domain mit der Sie Ihre Anwendung nutzen möchten.</td>
+                </tr>
+              </table>
+
+              <div class="buttonFooter">
+                <button class="ico icoCancel" type="button" onclick="return false;">abbrechen</button>
+                <button class="ico icoDelete" type="button" onclick="deleteDialog();">löschen</button>
+                <button class="ico icoOK" type="submit">speichern</button>
+              </div>
+            </form>
+          </div>
+<script type="text/javascript">
+  function deleteDialog() {
+    LC.dialog(360, 100, LC.dialog.ICO_WARNING,
+      'Server entfernen',
+      'Möchten Sie diesen Server wirklich von LiveConfig entfernen?',
+      'entfernen', function() {frm.del.value=1;frm.submit();},
+      'abbrechen', null
+      );
+  }
+</script>
+
+          <div class="dBox">
+            <h2>Berechtigungen</h2>
+            <div id="permTree" class="dTreeView"></div>
+
+            <script type="text/javascript">
+
+LC._localTemplatePrefix='../../../../templates/default/files/';
+
+var treeData = [
+  { name: 'General',
+    id:   1,
+    data: [
+      { name: 'Web Login',
+        id:   4,
+        checked: true
+      },
+      { name: 'SOAP API',
+        id:   5,
+        checked:true
+      }
+    ]
+  },
+  { name: 'Settings',
+    id:   2,
+    data: [
+      { name: 'Password',
+        id:   6,
+        checked:false
+      },
+      { name: 'Language',
+        id:   7,
+        checked:true
+      }
+    ]
+  },
+  { name: 'Contracts',
+    id:   3,
+    data: [ ]
+  }
+];
+
+var tree = new LC.TreeView('perm');
+//tree.width=200;
+//tree.height=300;
+tree.checkable = true;
+tree.readonly = false;
+tree.render(document.getElementById('permTree'), treeData);
+
+            </script>
+
+            <ul id="ul1" class="ulTabs">
+              <li id="tab1" class="active"><a href="#">Ressourcen</a></li>
+              <li id="tab2"><a href="#">Log-Dateien</a></li>
+              <li id="tab3">Verzeichnis</li>
+            </ul>
+            <div class="tabData" id="tab1data">
+              <p>Tasks...</p>
+              <p>Test: <a href="#" onclick="LC.popup.url(400,300,'Testfenster 1', 'dummy_iframe.html', false);return false;">Popup</a></p>
+              <table class="tabLayout">
+                <tr>
+                  <th class="separator">Überschrift</th>
+                </tr>
+                <tr>
+                  <td>Daten...</td>
+                </tr>
+              </table>
+              <table class="tabTiny">
+                <tr class="header">
+                  <th></th><th>Letzter Monat</th><th>Dieser Monat</th>
+                </tr>
+                <tr class="num">
+                  <th>Zugriffe:</th><td>1234</td><td>2345</td>
+                </tr>
+                <tr class="num">
+                  <th>Empfangene Bytes:</th><td>1234</td><td>2345</td>
+                </tr>
+                <tr class="num">
+                  <th>Gesendete Bytes:</th><td>1234</td><td>2345</td>
+                </tr>
+                <tr class="num">
+                  <th>Summe:</th><td>1234</td><td>2345</td>
+                </tr>
+                <tr class="last right">
+                  <th>Aktualisiert:</th><td>30.09.2011<br/>23:00:00</td><td>05.10.2011<br/>20:05:00</td>
+                </tr>
+              </table>
+            </div><!--tab1data-->
+            <div class="tabData" id="tab2data">
+              <div id="ftpDetails">###content###</div>
+              <div class="buttonFooter">
+                <button type="button" class="ico icoAdd" onclick="return(false);">FTP-Account hinzufügen</button>
+              </div>
+              <script type="text/javascript">
+  var list = [
+    { id: 123,
+      title: 'web1'
+    },
+    {
+      id: 234,
+      title: 'web1_test'
+    }
+  ];
+  $('#tab2data').AjaxList( { url:'lib/dummy_ajaxlist_ajax.html', list:list, css: {minWidth:'80%', height:'180px'}, content:$('#ftpDetails') } );
+              </script>
+            </div>
+            <div class="tabData" id="tab3data">
+              Verzeichnis wählen:
+              <div class="dFolders" id="FolderBox">
+                <ul class="ulFolders">
+                  <li><span>htdocs</span></li>
+                  <li><span>priv</span>
+                    <ul>
+                      <li class="selected"><span>test 1</span></li>
+                      <li class="loading"><span>Downloads</span></li>
+                      <li><span>.conf</span></li>
+                    </ul>
+                  </li>
+                  <li><span>tmp</span></li>
+                </ul>
+              </div>
+              <script type="text/javascript">
+                var fb = $('#FolderBox').lcFolders({ url:'lib/dummy_folders_json.js', data:'id=12345' });
+              </script>
+              <a href="#" onclick="console.log('fb:' + $('#FolderBox')[0].getPath());return false;">Pfad?</a>
+            </div>
+            <script type="text/javascript">$('#ul1').lcTabs();</script>
+
+          </div><!--dBox-->
+
+          <div class="dBox">
+            <h2 class="img"><img src="imgs/logo32-apache.png" width="32" height="32" alt="">Apache httpd</h2>
+            
+            <p>Hier stehen dann die Apache-Detail-Einstellungen...</p>
+
+            <ul class="labeled col2">
+              <li><label>Version:</label>2.2.22 (2.2.22-13+deb7u3)</li>
+              <li><label>Konfiguration:</label>/etc/apache2/conf.d/liveconfig</li>
+              <li><label>Module:</label><span class="icoNo">fcgid</span><br><span class="icoYes">php5</span><br><span class="icoNo"> proxy</span><br><span class="icoNo">proxy_http</span><br><span class="icoYes"> rewrite</span><br><span class="icoNo"> ssl</span><br><span class="icoNo"> suexec</span><br><span class="icoNo"> suphp</span><br></li>
+              <li><label>IP-Adressen:</label>192.168.x.x<p><button type="button" class="ico icoEdit" href="#" onclick="var p=LC.popup.url(400,230,'IP-Einstellungen bearbeiten', 'web/ips?id=lQ2dypY06qUWSsOhHMz-KKa9&oid=cMw9ZI1i09lN&ws=cMw9ZI1i09lN');">bearbeiten...</button></p></li>
+            </ul>
+            <ul class="labeled col2">
+              <li><label>Status:</label><span class="error">Can't open '/etc/apache2/conf.d/liveconfig' for writing: /etc/apache2/conf.d/liveconfig: Permission denied</span><br><span class="small">23.10.2014 20:16:02 CEST</span></li>
+              <li><label>Konfiguration:</label>
+            </ul>
+
+          </div>
+
+          <div class="dBox">
+            <h2>Tabelle</h2>
+            <table class="thLeft">
+              <tr>
+                <th>Letzte Anmeldung:</th>
+                <td colspan="4">Mittwoch, 05.11.2014 20:53:42 CET<br><span class="small">IP: 192.168.x.x</span></td>
+              </tr>
+              <tr>
+                <th>Diese Anmeldung:</th>
+                <td colspan="4">Donnerstag, 06.11.2014 10:45:44 CET<br><span class="small">IP: 192.168.x.x</span></td>
+              </tr>
+              <tr>
+                <th>Serverzeit:</th>
+                <td colspan="4">12:44:13 CET</td>
+              </tr>
+              <tr>
+                <th>Arbeitsspeicher:</th>
+                <td>RAM:</td>
+                <td class="right">2 GB,</td>
+                <td class="right">38% genutzt</td>
+                <td><div class="dFillBar"><div class="dFillBarContent green" style="width:38%;"></div><span>Hallo</span></div></td>
+              </tr>
+              <tr>
+                <th></th>
+                <td>Swap:</td>
+                <td class="right">1 GB,</td>
+                <td class="right">13% genutzt</td>
+                <td><div class="dFillBar"><div class="dFillBarContent green" style="width:13%;"></div></div></td>
+              </tr>
+              <tr>
+                <th>CPU:</th>
+                <td colspan="4" id="graphCPU">
+<script type="text/javascript">
+var graphCPUData={"title":"CPU Usage","step":60,"from":1415277060,"data":[0.18,0.15,0.30,0.16,0.98,0.14,0.19,0.33,0.28,9.31,3.96,0.14,0.24,0.19,0.33,0.28,0.74,0.23,0.19,1.63,0.15,0.16,0.28,0.14,0.40,0.28,0.12,0.23,0.18,11.12,2.54,0.15,0.54,1.29,10.25,0.23,0.21,0.45,null,4.28,1.67,0.17,0.22,null,4.40,0.38,null,2.04,2.16,13.53,0.53,0.56,null,0.75,0.13,0.74,0.44,1.04,0.81,0.16,1.86],"to":1415280660};
+var graphCPU = new LC.graph.mini(document.getElementById('graphCPU'), graphCPUData, 1415280639, null, 'lib/graph.json?test', 'CPU-Auslastung', { type:'abs' } );
+</script>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+        </div><!--dBoxCanvas-->
+
+<form action="reports" id="frmReport" method="get">
+  <p>
+    <input type="hidden" name="id" value="ZGmhZbe2l3MzvqGX2eb.DRQ7"/>
+    Bericht: <select name="r" onchange="document.getElementById('frmReport').submit();">
+      <option value="0">Übersicht</option>
+      <option value="1">alle Kunden</option>
+      <option value="2">Kunden-Verträge</option>
+      <option value="3">Kunden-Domains</option>
+      <option value="4">eigene Verträge</option>
+      <option value="5">eigene Domains</option>
+      <option value="6" selected>Top10-Verträge</option>
+    </select>
+    <br/>Datum: 28.11.2014 22:04:55 CET</p><p>Zeige die Top10-Verträge mit den meisten
+    <select name="st" onchange="document.getElementById('frmReport').submit();">
+      <option value="0">HTTP-Zugriffe</option>
+      <option value="1">HTTP-Traffic</option>
+      <option value="2">E-Mails</option>
+      </select> innerhalb der letzten 24 Stunden:
+  </p>
+  <table>
+    <tr>
+      <td>
+        <div id="dGraph"></div>
+      </td>
+      <td>
+        <table class="tabData">
+          <thead><tr><th>Vertrag</th><th>Name</th><th colspan="2">Zugriffe</th><th>Traffic</th><th>E-Mails</th></tr></thead>
+          <tbody>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cIEzFgCNnwwM&cid=cOncIBiMcRRa">web168</a></td><td>xxx</td><td class="right">79.958</td><td class="right">(12,03%)</td><td class="right">167,46 MiB</td><td class="right">0</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cMoZcQmeGWp0&cid=cHJH.eCO-D1N">web354</a></td><td>xxx</td><td class="right">40.723</td><td class="right">(6,13%)</td><td class="right">1.560,98 MiB</td><td class="right">0</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cP5.jpYqYAwx&cid=cLtv4.b2sJsn">web418</a></td><td>xxx</td><td class="right">34.020</td><td class="right">(5,12%)</td><td class="right">359,78 MiB</td><td class="right">0</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cADe2IyjSkpt&cid=cAJTtNNyCOcs">web410</a></td><td>xxx</td><td class="right">33.059</td><td class="right">(4,98%)</td><td class="right">833,00 MiB</td><td class="right">0</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cBovgN0BWXrU&cid=cOq5uGj1Kvqr">web113</a></td><td>xxx</td><td class="right">31.413</td><td class="right">(4,73%)</td><td class="right">927,37 MiB</td><td class="right">0</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cO0FQm3lFWs5&cid=cMoZcQmeGWp0">web329</a></td><td>xxx</td><td class="right">30.096</td><td class="right">(4,53%)</td><td class="right">1.225,57 MiB</td><td class="right">0</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cNajzkhaUwXF&cid=cFnP5YI6TWtf">web215</a></td><td>xxx</td><td class="right">25.580</td><td class="right">(3,85%)</td><td class="right">275,86 MiB</td><td class="right">0</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cNihhUMxk65-&cid=cMw9ZI1i09lN">web1</a></td><td>xxx</td><td class="right">25.101</td><td class="right">(3,78%)</td><td class="right">152,66 MiB</td><td class="right">0</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cN5rYwtvW7Rw&cid=cDzGn4CGXrSI">web339</a></td><td>xxx</td><td class="right">24.357</td><td class="right">(3,67%)</td><td class="right">1.858,89 MiB</td><td class="right">96</td></tr>
+            <tr><td><a href="customers/details/subscriptions?id=ZGmhZbe2l3MzvqGX2eb.DRQ7&oid=cHbgO9apIL5F&cid=cMAwytNjuE8o">web71</a></td><td>xxx</td><td class="right">23.689</td><td class="right">(3,56%)</td><td class="right">1.346,35 MiB</td><td class="right">0</td></tr></tbody></table>
+      </td>
+    </tr>
+  </table>
+<script type="text/javascript">var values=[1203,612,511,497,472,452,384,377,366,356,4763], labels=['web168','web354','web418','web410','web113','web329','web215','web1','web339','web71','andere'];Raphael("dGraph", 200, 200).pieChart(100, 100, 80, values, labels, "#999999");</script>
+</form>
+
+      </div><!--dSelectCanvas-->
+
+    </section>
+    <footer>
+      <a href="#" onclick="var p=LC.popup.url(400,310,'Über LiveConfig', 'iframe.html');return(false);">LiveConfig<sup>®</sup></a> - Copyright © 2009-2014.
+    </footer>
+  </div><!--/Wrapper-->
+  </body>
+</html>
