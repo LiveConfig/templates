@@ -6,7 +6,7 @@
  *                                    |___/
  * Copyright (c) 2009-2014 Keppler IT GmbH.
  * ---------------------------------------------------------------------------
- * $Id: style.css 3312 2014-12-11 15:25:25Z kk $
+ * $Id: style.css 3344 2014-12-21 23:57:44Z kk $
  *
  * HTML5 design template
  * ---------------------------------------------------------------------------
@@ -37,18 +37,31 @@ p.left { text-align:left; }
 p.center { text-align:center; }
 p.right { text-align:right; }
 p.error, span.error { font-weight:bold; color:#990000; }
-span.icoYes:before, span.icoNo:before, span.icoHourglass:before, span.icoLoading:before {
+span.icoYes:before, span.icoNo:before, span.icoWarn, span.icoHourglass:before, span.icoWrench:before,
+span.icoPause:before, span.icoDeleted:before, span.icoDomain:before, span.icoMail:before, span.icoLock:before,
+span.icoExt:before, span.icoIPv4:before, span.icoIPv6:before,
+span.icoBlank:before, span.icoLoading:before {
 	background:url(sprite.png) no-repeat -51px 0px;
 	content:" ";
-	position:relative;
 	display:inline-block;
 	width:12px;
 	height:12px;
-	top:1px;
-	padding-right:2px;
+	margin-right:2px;
 }
 span.icoNo:before { background-position: -51px -12px; }
+span.icoWarn:before { background-position: -51px -24px; }
 span.icoHourglass:before { background-position: -51px -36px; }
+span.icoWrench:before { background-position: -51px -48px; }
+span.icoPause:before { background-position: -51px -60px; }
+span.icoDeleted:before { background-position: -63px 0px; }
+span.icoDomain:before { background-position: -63px -12px; }
+span.icoMail:before { background-position: -63px -24px; }
+span.icoLock:before { background-position: -63px -36px; }
+span.icoExt:before { background-position: -63px -48px; }
+span.icoIPv4:before { background-position: -63px -60px; }
+span.icoIPv6:before { background-position: -63px -72px; }
+
+span.icoBlank:before { background:none; }
 span.icoLoading:before { background:url(ico12-loading.gif) no-repeat 0px 0px; }
 
 body.iframe ::-webkit-scrollbar {
@@ -711,12 +724,12 @@ div.dTableSearch {
 }
 
 div.dTableSearch > div.icoSearch {
-	width:16px; height:16px; position:absolute; right:3px; top:2px;
+	width:16px; height:16px; position:absolute; right:3px; top:5px;
 	background:url(nav.png) no-repeat -272px 0px;
 }
 
 div.dTableSearch > div.icoClear {
-	width:16px; height:16px; position:absolute; right:3px; top:2px;
+	width:16px; height:16px; position:absolute; right:3px; top:5px;
 	background:url(btn.png) no-repeat -16px 0px;
 }
 
@@ -1034,6 +1047,7 @@ table.tabTiny tr.right > td { text-align:right; }
  * ------------------------------------------------------------------------ */
 div.dSelectCanvas {
 	padding-left:200px;
+	/* border:2px solid #009900; */
 }
 
 div.dSelectCanvas > div:first-child {
@@ -1106,6 +1120,11 @@ ul.lcAjaxList > li.active > span {
  * ------------------------------------------------------------------------ */
 div.dBoxCanvas {
 	/* border:1px solid #000099; */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width:100%;
+	min-width:460px;
 }
 
 div.dSelectCanvas > div.dBoxCanvas {
@@ -1116,6 +1135,9 @@ div.dSelectCanvas > div.dBoxCanvas {
  * Content box
  * ------------------------------------------------------------------------ */
 div.dBox {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	border:1px solid #CCCCCC;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -1124,14 +1146,27 @@ div.dBox {
 	padding:8px;
 	display:inline-block;
 	vertical-align:top;
-	width:47%;
-	max-width:600px;
-	margin:0px 4px 10px 0px;
+	width:48%;
+	min-width:400px;
+	max-width:800px;
+	margin:0px 0px 10px 0px;
+	margin-right:1%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 	div.dBox {
-		width:98%;
+		/* border:2px solid #990000; */
+		width:100%;
+	}
+}
+
+@media (max-width: 1360px) {
+	div.dBox {
+		width:48%;
+	}
+	div.dSelectCanvas > div.dBoxCanvas > div.dBox {
+		/* border:2px solid #009900; */
+		width:100%;
 	}
 }
 
@@ -1523,6 +1558,24 @@ div.tabData {
 
 ul.ulTabs + div.tabData {
 	display:block;
+}
+
+/* ---------------------------------------------------------------------------
+ * Log viewer
+ * ------------------------------------------------------------------------ */
+#dLogview {
+  width:auto;
+  height:380px;
+  margin:6px 0px;
+  padding:6px;
+  border:1px solid #999999;
+  font:12px/15px Courier New, Courier, monospace;
+  -moz-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);;
+  -webkit-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  background:#F6F6F6;
+  overflow:scroll;
+  white-space:pre;
 }
 
 /* ---------------------------------------------------------------------------
