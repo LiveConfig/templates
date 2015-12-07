@@ -4,8 +4,8 @@
    | |__| \ V / -_) (__/ _ \ ' \|  _| / _` |
    |____|_|\_/\___|\___\___/_||_|_| |_\__, |
                                       |___/
-   Copyright (c) 2009-2014 Keppler IT GmbH.
-   $Id: login.html 3323 2014-12-12 16:02:11Z kk $
+   Copyright (c) 2009-2015 Keppler IT GmbH.
+   $Id: login.html 3789 2015-09-26 18:50:36Z kk $
  
    HTML5 design template - login page
 -->
@@ -25,16 +25,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-title" content="LiveConfig">
 <!-- / -->
-    <script src="../../resources/sources/jquery-1.11.1.js"></script>
-    <script src="../../resources/sources/liveconfig.js"></script>
-    <script src="../../resources/sources/spin.js"></script>
-<!--
     <script src="lib/liveconfig.min.js"></script>
--->
-    <!--[if lt IE 9]>
-    <script src="lib/html5.js"></script>
-    <link rel="stylesheet" type="text/css" href="default/style-ie.css">
-    <![endif]-->
     <script type="text/javascript">
       if (top != self) top.location=location;
       LC._lang='de';
@@ -43,69 +34,54 @@
   <body>
   <script type="text/javascript">
     $(function() {
-      if (window.devicePixelRatio == 2) {
-        document.getElementById('imgLogo').src='imgs/logo-login@2x.png';
-      }
       $('#frmLogin').lcFormValidator({
         fn: function(frm) { if (frm.l.value != '' && frm.p.value != '') LC.login('lib/login-confirm.json', frm.l.value, frm.p.value); }
       });
     });
   </script>
-<!--
-  <div id="bgDisabled">
-    <div class="dPopup">
-      <h2>Bitte warten...</h2>
-      <p>Ihre Anmeldedaten werden geprüft.</p>
-      <script type="text/javascript">
-        var sp = new Spinner({color:'#fff',speed:1.3,length:16,top:'60%',radius:12,corners:1}).spin($('div.dPopup')[0]);
-      </script>
+  <header>
+    <img id="imgLogo" src="imgs/logo.svg" width="320" alt="LiveConfig®">
+  </header>
+
+  <section>
+    <p class="error">((Error message goes here...))</p>
+    <form id="frmLogin" action="login.html" method="post" novalidate>
+      <fieldset>
+        <ol>
+          <li>
+            <label for="inpLogin">User name:</label>
+            <input class="text" type="text" name="l" id="inpLogin" value="" autofocus required>
+          </li>
+          <li>
+            <label for="inpPass">Password:</label>
+            <input class="text" type="password" name="p" id="inpPass" value="" required>
+          </li>
+          <li>
+            <label for="inpLang">Language:</label>
+            <select name="lang" id="inpLang" onchange="$('#frmLogin')[0].refresh( { a:0 } );">
+              <option value="" selected="selected">Standard</option>
+              <option value="de">de - Deutsch</option>
+              <option value="en">en - English</option>
+              <option value="es">es - Español</option>
+              <option value="nl">nl - Nederlands</option>
+              <option value="sr">sr - српски</option>
+            </select>
+          </li>
+        </ol>
+        <p class="center"><button type="submit" class="ico ico-login">Login</button></p>
+        <p class="center"><a href="#">Hilfe</a> · <a href="#">Forgot password?</a></p>
+        <input type="hidden" name="a" value="1">
+      </fieldset>
+    </form>
+    <div class="dError">
+      No valid license key found.<br>
+      Please activate your LiveConfig license.<br>
+      LiveConfig will temporarily run in demo mode.
     </div>
-  </div>
--->
-  <div><!--Wrapper-->
-    <header>
-      <img id="imgLogo" src="imgs/logo-login.png" width="320" height="60" alt="LiveConfig®">
-    </header>
+  </section>
 
-    <section>
-      <p class="error">Das hier ist nun irgendeine unbedeutende Fehlermeldung, welche im schlimmsten Falle sogar zu einem Zeilenumbruch führen könnte.</p>
-      <form id="frmLogin" action="login.html" method="post" novalidate>
-        <fieldset>
-          <ol>
-            <li>
-              <label for="inpLogin">Benutzername:</label>
-              <input class="text" type="text" name="l" id="inpLogin" value="" autofocus required>
-            </li>
-            <li>
-              <label for="inpPass">Passwort:</label>
-              <input class="text" type="password" name="p" id="inpPass" value="" required>
-            </li>
-            <li>
-              <label for="inpLang">Sprache:</label>
-              <select name="lang" id="inpLang" onchange="$('#frmLogin')[0].refresh( { a:0 } );">
-                <option value="" selected="selected">Standard</option>
-                <option value="de">de - Deutsch</option>
-                <option value="en">en - English</option>
-                <option value="es">es - Español</option>
-                <option value="nl">nl - Nederlands</option>
-                <option value="sr">sr - српски</option>
-              </select>
-            </li>
-          </ol>
-          <p><button type="submit" class="ico icoOK">Anmeldung</button></p>
-          <p><a href="#">Hilfe</a> · <a href="#">Passwort vergessen?</a></p>
-          <input type="hidden" name="a" value="1">
-        </fieldset>
-      </form>
-      <div class="dError">
-        Es wurde kein gültiger Lizenzschlüssel gefunden.<br>
-        Bitte aktivieren Sie Ihre LiveConfig-Lizenz.<br>
-        LiveConfig wird vorerst im Demo-Modus laufen.
-      </div>
-    </section>
+  <footer>
+  </footer>
 
-    <footer>
-    </footer>
-  </div><!--/Wrapper-->
   </body>
 </html>

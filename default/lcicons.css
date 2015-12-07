@@ -1,0 +1,339 @@
+@font-face {
+	font-family:"lcicons";
+	src:url("lcicons.eot");
+	src:url("lcicons.eot?#iefix") format("embedded-opentype"),
+		url("lcicons.woff2") format("woff2"),
+		url("lcicons.woff") format("woff"),
+		url("lcicons.ttf") format("truetype"),
+		url("lcicons.svg#lcicons") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+.ico:before {
+	font-family:"lcicons";
+	display:inline-block;
+	vertical-align:middle;
+	line-height:1;
+	font-weight:normal;
+	font-style:normal;
+	speak:none;
+	text-decoration:inherit;
+	text-transform:none;
+	text-rendering:auto;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+
+/* Icons */
+
+
+.ico-box-checked:before {
+	content:"\f101";
+}
+
+
+.ico-box-empty:before {
+	content:"\f102";
+}
+
+
+.ico-box-some:before {
+	content:"\f103";
+}
+
+
+.ico-check:before, .ico-ok:before {
+	content:"\2713";
+}
+
+
+.ico-database:before {
+	content:"\26c3";
+}
+
+
+.ico-info:before {
+	content:"\2139";
+}
+
+
+.ico-license:before {
+	content:"\f104";
+}
+
+
+.ico-php-code:before {
+	content:"\f105";
+}
+
+
+.ico-question:before {
+	content:"\f106";
+}
+
+
+.ico-warning:before {
+	content:"\26a0";
+}
+
+
+.ico-blank:before {
+	content:"\f107";
+}
+
+
+.ico-liveconfig:before {
+	content:"\f108";
+}
+
+
+.ico-loading:before {
+	content:"\274a";
+}
+
+
+.ico-calculator:before {
+	content:"\f109";
+}
+
+
+.ico-certificate:before {
+	content:"\f10a";
+}
+
+
+.ico-chart-bar:before {
+	content:"\1f4ca";
+}
+
+
+.ico-close-circle:before {
+	content:"\2bbf";
+}
+
+
+.ico-comment-text-outline:before {
+	content:"\f10b";
+}
+
+
+.ico-file-document:before {
+	content:"\1f5ce";
+}
+
+
+.ico-file-multiple:before {
+	content:"\1f5d0";
+}
+
+
+.ico-key-variant:before, .ico-key:before {
+	content:"\1f511";
+}
+
+
+.ico-login:before {
+	content:"\2386";
+}
+
+
+.ico-logout:before {
+	content:"\f10c";
+}
+
+
+.ico-package-variant:before {
+	content:"\1f4e6";
+}
+
+
+.ico-server-network:before {
+	content:"\1f5a7";
+}
+
+
+.ico-sitemap:before {
+	content:"\f10d";
+}
+
+
+.ico-xml:before {
+	content:"\f10e";
+}
+
+
+.ico-account-multiple:before {
+	content:"\1f465";
+}
+
+
+.ico-account:before {
+	content:"\1f464";
+}
+
+
+.ico-alarm:before {
+	content:"\23f0";
+}
+
+
+.ico-auto-fix:before, .ico-random:before {
+	content:"\f10f";
+}
+
+
+.ico-clock:before {
+	content:"\f110";
+}
+
+
+.ico-close-circle-outline:before, .ico-cancel:before {
+	content:"\2297";
+}
+
+
+.ico-close:before {
+	content:"\2715";
+}
+
+
+.ico-cloud-outline:before {
+	content:"\2601";
+}
+
+
+.ico-delete:before {
+	content:"\1f5d1";
+}
+
+
+.ico-desktop-mac:before, .ico-screen:before {
+	content:"\1f5b5";
+}
+
+
+.ico-download:before {
+	content:"\1f4e5";
+}
+
+
+.ico-email:before {
+	content:"\2709";
+}
+
+
+.ico-exit-to-app:before {
+	content:"\2348";
+}
+
+
+.ico-eye-off:before {
+	content:"\f100";
+}
+
+
+.ico-eye:before {
+	content:"\1f441";
+}
+
+
+.ico-folder-outline:before {
+	content:"\f111";
+}
+
+
+.ico-home:before {
+	content:"\1f3e0";
+}
+
+
+.ico-information:before {
+	content:"\f112";
+}
+
+
+.ico-lock:before {
+	content:"\1f512";
+}
+
+
+.ico-magnify:before {
+	content:"\1f50d";
+}
+
+
+.ico-menu-down:before {
+	content:"\f113";
+}
+
+
+.ico-menu-up:before {
+	content:"\f114";
+}
+
+
+.ico-menu:before {
+	content:"\2630";
+}
+
+
+.ico-minus-circle-outline:before, .ico-remove:before {
+	content:"\2796";
+}
+
+
+.ico-pause-circle-outline:before {
+	content:"\23f8";
+}
+
+
+.ico-pencil:before {
+	content:"\1f589";
+}
+
+
+.ico-play:before {
+	content:"\25b6";
+}
+
+
+.ico-plus-circle-outline:before, .ico-add:before {
+	content:"\2795";
+}
+
+
+.ico-refresh:before {
+	content:"\27f3";
+}
+
+
+.ico-settings:before {
+	content:"\2699";
+}
+
+
+.ico-skip-next:before {
+	content:"\23ed";
+}
+
+
+.ico-skip-previous:before {
+	content:"\23ee";
+}
+
+
+.ico-upload:before {
+	content:"\1f4e4";
+}
+
+
+.ico-web:before {
+	content:"\1f310";
+}
+
+
+.ico-wrench:before {
+	content:"\1f527";
+}
