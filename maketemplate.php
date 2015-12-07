@@ -20,8 +20,8 @@ if (!is_dir($name)) {
   exit(1);
 }
 
-# compress .css and .js files
-foreach (glob("$name/*.{css,js}", GLOB_BRACE) as $file) {
+# compress some files
+foreach (glob("$name/*.{css,js,svg,eot,ttf}", GLOB_BRACE) as $file) {
   echo "- compressing: $file\n";
   if (!($f_out = gzopen("$file.gz", 'wb9'))) {
     fwrite(STDERR, "$argv[0]: can't create $file.gz for compression.\n");
@@ -45,6 +45,7 @@ if (!($db = dba_open("$name.tmpl", 'n', 'cdb_make'))) {
 # get all files from the template directory:
 foreach (scandir($name) as $file) {
   if (is_dir("$name/$file")) continue;
+  if (preg_match('/\.(html)$/', $file)) continue;
   echo "- $file\n";
 
   # add file to template database:
