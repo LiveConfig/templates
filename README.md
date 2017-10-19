@@ -25,9 +25,13 @@ So to provide your own template, you "just" have to create such a cdb file using
 ### Using the template
 
 1. copy the template file into `/usr/share/liveconfig/`
-2. in the LiveConfig database, insert/update the record in LCDEFAULT:
-   ```INSERT INTO LCDEFAULTS (LD_KEY, LD_VALUE) VALUES \
-    ("liveconfig.web.template", "megacool");```
+2. in the LiveConfig database, insert/update the record in LCDEFAULTS:
+
+```
+INSERT INTO LCDEFAULTS (LD_KEY, LD_VALUE) VALUES \
+  ("liveconfig.web.template", "megacool");
+```
+
 3. then restart LiveConfig
 
 ## Legal issues
