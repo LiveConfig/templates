@@ -1,11 +1,11 @@
 @font-face {
 	font-family:"lcicons";
-	src:url("lcicons.eot");
-	src:url("lcicons.eot?#iefix") format("embedded-opentype"),
-		url("lcicons.woff2") format("woff2"),
-		url("lcicons.woff") format("woff"),
-		url("lcicons.ttf") format("truetype"),
-		url("lcicons.svg#lcicons") format("svg");
+	src:url("lcicons.eot?v4");
+	src:url("lcicons.eot?v4#iefix") format("embedded-opentype"),
+		url("lcicons.ttf?v4") format("truetype"),
+		url("lcicons.woff2?v4") format("woff2"),
+		url("lcicons.woff?v4") format("woff"),
+		url("lcicons.svg?v4#lcicons") format("svg");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -61,6 +61,16 @@
 
 .ico-license:before {
 	content:"\f104";
+}
+
+
+.ico-lock-open:before {
+	content:"\1f513";
+}
+
+
+.ico-lock:before {
+	content:"\1f512";
 }
 
 
@@ -134,6 +144,11 @@
 }
 
 
+.ico-language-php:before, .ico-php:before {
+	content:"\1f418";
+}
+
+
 .ico-login:before {
 	content:"\2386";
 }
@@ -181,6 +196,11 @@
 
 .ico-auto-fix:before, .ico-random:before {
 	content:"\f10f";
+}
+
+
+.ico-cancel:before {
+	content:"\2300";
 }
 
 
@@ -256,11 +276,6 @@
 
 .ico-information:before {
 	content:"\f113";
-}
-
-
-.ico-lock:before {
-	content:"\1f512";
 }
 
 
