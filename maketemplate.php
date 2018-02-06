@@ -46,6 +46,7 @@ if (!($db = dba_open("$name.tmpl", 'n', 'cdb_make'))) {
 foreach (scandir($name) as $file) {
   if (is_dir("$name/$file")) continue;
   if (preg_match('/\.(html)$/', $file)) continue;
+  if (preg_match('/^\./', $file)) continue;
   echo "- $file\n";
 
   # add file to template database:
