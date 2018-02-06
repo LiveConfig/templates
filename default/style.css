@@ -12,7 +12,7 @@
  * ---------------------------------------------------------------------------
  */
 
-@import url('lcicons.css?v1');
+@import url('lcicons.css?v2');
 
 .ico.big {
 	font-size:36px;
@@ -758,6 +758,7 @@ table.tabData > tbody > tr > td {
 	overflow:hidden;
 	text-overflow: ellipsis;
 	padding:0px 3px;
+	position:relative;
 }
 
 table.tabData > thead > tr > th {
@@ -849,6 +850,31 @@ table.tabData.clickable > tbody > tr > td > a {
 	color:#444444;
 	/* white-space:pre; */
 	display:block;
+}
+
+table.tabData > tbody > tr > td > div.dCmd {
+	width:18px;
+	height:18px;
+	position:absolute;
+	right:0px;
+	top:3px;
+	display:none;
+	font-family:'lcicons';
+	font-size:18px;
+	line-height:18px;
+	color:#999999;
+}
+
+table.tabData > tbody > tr:hover > td > div.dCmd {
+	display:block;
+}
+
+table.tabData > tbody > tr:hover > td > div.dCmd:hover {
+	color:#333333;
+}
+
+table.tabData > tbody > tr > td > div.dCmd + div.dCmd {
+	right:20px;
 }
 
 .dTableFooter {

@@ -184,8 +184,13 @@
 }
 
 
-.ico-clock:before {
+.ico-clipboard-text:before {
 	content:"\f110";
+}
+
+
+.ico-clock:before {
+	content:"\f111";
 }
 
 
@@ -240,7 +245,7 @@
 
 
 .ico-folder-outline:before {
-	content:"\f111";
+	content:"\f112";
 }
 
 
@@ -250,7 +255,7 @@
 
 
 .ico-information:before {
-	content:"\f112";
+	content:"\f113";
 }
 
 
@@ -265,12 +270,12 @@
 
 
 .ico-menu-down:before {
-	content:"\f113";
+	content:"\f114";
 }
 
 
 .ico-menu-up:before {
-	content:"\f114";
+	content:"\f115";
 }
 
 
@@ -281,6 +286,11 @@
 
 .ico-minus-circle-outline:before, .ico-remove:before {
 	content:"\2796";
+}
+
+
+.ico-open-in-new:before {
+	content:"\f116";
 }
 
 
