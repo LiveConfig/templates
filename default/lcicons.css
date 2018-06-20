@@ -1,11 +1,11 @@
 @font-face {
 	font-family:"lcicons";
-	src:url("lcicons.eot?v4");
-	src:url("lcicons.eot?v4#iefix") format("embedded-opentype"),
-		url("lcicons.ttf?v4") format("truetype"),
-		url("lcicons.woff2?v4") format("woff2"),
-		url("lcicons.woff?v4") format("woff"),
-		url("lcicons.svg?v4#lcicons") format("svg");
+	src:url("lcicons.eot?v5");
+	src:url("lcicons.eot?v5#iefix") format("embedded-opentype"),
+		url("lcicons.ttf?v5") format("truetype"),
+		url("lcicons.woff2?v5") format("woff2"),
+		url("lcicons.woff?v5") format("woff"),
+		url("lcicons.svg?v5#lcicons") format("svg");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -61,6 +61,11 @@
 
 .ico-license:before {
 	content:"\f104";
+}
+
+
+.ico-list-more:before {
+	content:"\2335";
 }
 
 
