@@ -6,7 +6,7 @@
  *                                    |___/
  * Copyright (c) 2009-2015 Keppler IT GmbH.
  * ---------------------------------------------------------------------------
- * $Id: login.css 4118 2016-02-22 12:09:14Z kk $
+ * $Id: login.css 4898 2018-03-09 21:17:16Z kk $
  *
  * HTML5 design template
  * ---------------------------------------------------------------------------
@@ -64,7 +64,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-input[type="password"], input[type="search"], input[type="text"] { -webkit-appearance: none; border-radius:0; }
+input[type="email"], input[type="password"], input[type="search"], input[type="text"] { -webkit-appearance: none; border-radius:0; }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
@@ -211,6 +211,7 @@ fieldset > ol > li > label:first-child {
 	white-space:nowrap;
 }
 
+input[type="email"],
 input[type="text"],
 input[type="password"],
 input[type="search"],
@@ -224,6 +225,7 @@ select
 	transition: border-color .1s linear, box-shadow .1s linear;
 }
 
+input[type="email"]:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
@@ -237,7 +239,9 @@ input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus::-moz-placeholder { color:transparent; }
 input:focus:-ms-input-placeholder { color:transparent; }
 
-form:not([novalidate]) input[type="text"]:invalid, form:not([novalidate]) input[type="password"]:invalid {
+form:not([novalidate]) input[type="email"]:invalid,
+form:not([novalidate]) input[type="text"]:invalid,
+form:not([novalidate]) input[type="password"]:invalid {
 	border-color:#CC0000;
 	outline:0;
 	box-shadow: 1px 2px 4px -2px #DDDDDD inset, 0px 0px 3px #CC0000;
