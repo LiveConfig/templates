@@ -1696,6 +1696,7 @@ span.icoYes:before, span.icoNo:before {
 }
 span.icoYes:before { content: '\2713'; color:#009900; }	/* .ico-close-circle */
 span.icoNo:before { content: '\2bbf'; color:#990000; }	/* .ico-check */
+span.icoWarning:before { content: '\26a0'; color:#999900; font-size:1.1em; }	/* .ico-warning */
 
 /* ------------------------------------------------------------------------
  * max. 960 px:
