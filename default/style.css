@@ -1945,7 +1945,11 @@ span.icoWarning:before { content: '\26a0'; color:#999900; font-size:1.1em; }	/* 
  * "init" style pages
  * ------------------------------------------------------------------------ */
 html.init {
-	background-color:#F8F8F8;
+	background:url(bg-init.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 html.init body {
