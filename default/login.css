@@ -506,4 +506,20 @@ h2 {
 	font-weight:bold;
 }
 
+#infobox {
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	background-color:#E2E2E2;
+	height:100px;
+	width:320px;
+	text-align:left;
+	color:#606060;
+	padding:4px 20px 4px 140px;
+}
+
+#infobox.trial {
+	background:url(../imgs/img-trial.png) no-repeat 12px 8px #E2E2E2;
+}
+
 /* <EOF> ------------------------------------------------------------------ */

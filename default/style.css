@@ -1748,7 +1748,12 @@ span.icoWarning:before { content: '\26a0'; color:#999900; font-size:1.1em; }	/* 
 	}
 	html:not(.iframe) header > img { height:30px; width:auto; top:6px; }
 	html:not(.iframe) footer { right:6px; bottom:6px; }
-	#dUserInfo, #dQuickSearch, #topinfo { display:none; }
+	/* #dUserInfo, #dQuickSearch, #topinfo { display:none; } */
+	#topinfo { top:41px; }
+	#dQuickSearch { display:none; }
+	#dUserInfo > span, #dUserInfo > span.sAdminUser { display:none; }
+	#dUserInfo > button { font-size:0; margin-top:1px; }
+	#dUserInfo > button.ico:before { font-size:26px; display:normal; padding:4px 0px 0px 4px; }
 	#dMenuIcon { display:inline-block; }
 
 	body > nav {
