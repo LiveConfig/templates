@@ -1289,6 +1289,12 @@ ul.labeled > li > label:first-child {
 	white-space:nowrap;
 }
 
+ul.radio > li > label { font-weight: bold; }
+ul.radio > li > div {
+	display:none;
+	margin-left: 24px;
+}
+
 input[type="email"],
 input[type="number"],
 input[type="text"],

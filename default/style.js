@@ -29,6 +29,12 @@ $(function(){
 		$('body > nav').slideToggle();
 	});
 	$('header > img').after(menuBtn);
+	// ul.radio animation:
+	$('ul.radio > li > input[type=radio]:checked+label+div').show();
+	$('ul.radio > li > input[type=radio]').on('change', function() {
+		$(this).parent().parent().find('li > div').slideUp(200);
+		$(this).parent().find('div').slideDown(200);
+	});
 //	if (LC.hasTouch) return; // no sliding sidenav on iPad/Android...
 	var sidebar = {
 		obj: $('body > nav'),
