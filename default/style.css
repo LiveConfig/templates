@@ -215,7 +215,7 @@ header {
 	height:61px;
 	width:100%;
 	z-index:2;
-	background: linear-gradient(to bottom, #EEEEEE 0%, #CCCCCC 100%);
+	background: linear-gradient(to bottom, #E6E6E6 0%, #D3D3D3 100%);
 	border-bottom:1px solid #999999;
 	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.2);
 }
@@ -254,7 +254,7 @@ body > nav > ul > li > ul > li > a {
 }
 body > nav > ul > li > ul > li > a > i {
 	font-size:1.2em !important;
-	color:#AA5555;
+	color:#880000;
 	padding-right:6px;
 	position:relative;
 	top:-0.1em;
@@ -357,16 +357,6 @@ main > nav > ul > li {
 	border:1px solid #BBBBBB;
 	font-size:12pt;
 	background: linear-gradient(to bottom, #F6F6F6 0%, #E6E6E6 100%);
-}
-
-main > nav > ul > li:first-child {
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-
-main > nav > ul > li:last-child {
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
 }
 
 main > nav > ul > li+li { border-left:none; }
@@ -1294,6 +1284,7 @@ ul.radio > li > div {
 	display:none;
 	margin-left: 24px;
 }
+ul.radio.noHide > li > div { display:block; }
 
 input[type="email"],
 input[type="number"],
@@ -1576,7 +1567,6 @@ footer {
 	background:#E8E8AC;
 	background: linear-gradient(to bottom, #FFFFD3 0%, #E8E8AC 100%);
 	padding:4px 6px 5px 6px;
-	border-radius:3px;
 }
 #dAdminInfo span {
 	display:block;

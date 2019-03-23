@@ -30,8 +30,8 @@ $(function(){
 	});
 	$('header > img').after(menuBtn);
 	// ul.radio animation:
-	$('ul.radio > li > input[type=radio]:checked+label+div').show();
-	$('ul.radio > li > input[type=radio]').on('change', function() {
+	$('ul.radio:not(.noHide) > li > input[type=radio]:checked+label+div').show();
+	$('ul.radio:not(.noHide) > li > input[type=radio]').on('change', function() {
 		$(this).parent().parent().find('li > div').slideUp(200);
 		$(this).parent().find('div').slideDown(200);
 	});
