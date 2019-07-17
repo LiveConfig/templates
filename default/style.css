@@ -184,7 +184,7 @@ body {
 	position:relative;
 	min-height:100%;
 	height:100%;
-	color:#444444;
+	color:#333333;
 	line-height:1.2em;
 }
 
@@ -327,12 +327,12 @@ h2 {
 	font-size:1.2em;
 	font-weight:bold;
 	margin:8px 0px 8px 0px;
-	color:#555555;
+	color:#444444;
 }
 h3 {
 	font-weight:bold;
 	margin:6px 0px 6px 0px;
-	color:#555555;
+	color:#444444;
 }
 p { margin:8px 0px; }
 
@@ -393,9 +393,8 @@ div.dFillBar {
 	max-width:200px;
 	height:12px;
 	border:1px solid #CCCCCC;
-	border-radius: 3px;
-	/* background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); */
-	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.08) 100%);
+	/* border-radius: 3px; */
+	/* background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.08) 100%); */
 }
 
 div.dFillBar.marker {
@@ -411,18 +410,18 @@ div.dFillBar > div.dFillBarContent {
 	border-right:none;
 	position:relative;
 	top:-1px; left:-1px;
-	/* background: linear-gradient(to bottom, #cdf7cb 0%, #abf1ac 50%, #7fe97d 51%, #bafabb 100%); */
-	background: linear-gradient(to bottom, #cdf7cb 0%, #7fe97d 100%);
+	/* background: linear-gradient(to bottom, #cdf7cb 0%, #7fe97d 100%); */
+	background:#00CC00;
 }
 
 div.dFillBar > div.dFillBarContent.yellow {
-	/* background: linear-gradient(to bottom, #ebf43c 0%, #f8f80a 50%, #e4e406 51%, #f8fc28 100%); */
-	background: linear-gradient(to bottom, #dbe42c 0%, #c4c406 100%);
+	/* background: linear-gradient(to bottom, #dbe42c 0%, #c4c406 100%); */
+	background:#DDDD00;
 }
 
 div.dFillBar > div.dFillBarContent.red {
-	/* background: linear-gradient(to bottom, #fdd1d1 0%, #fd8d91 50%, #fd696e 51%, #fec0c1 100%); */
-	background: linear-gradient(to bottom, #fdc1c1 0%, #fd696e 100%);
+	/* background: linear-gradient(to bottom, #fdc1c1 0%, #fd696e 100%); */
+	background:#FF3333;
 }
 
 div.dFillBar > div.dFillBarContentMarker {
@@ -649,7 +648,7 @@ table.tabBorder > tbody > tr > th {
 
 table.tabBorder > tbody > tr > th {
 	text-align:left;
-	color:#555555;
+	color:#444444;
 }
 
 /* thLeft ----------------------------------------------------------------- */
@@ -661,7 +660,7 @@ table.thLeft {
 table.thLeft > tbody > tr > th,
 table.thLeft > tbody > tr > td {
 	vertical-align:baseline;
-	padding-right:6px;
+	padding: 1px 6px 1px 0px;
 }
 
 table.thLeft > tbody > tr > th {
@@ -1085,12 +1084,14 @@ div.ajaxSelect + div.ajaxContent:after {
 	padding:6px 10px;
 	margin:4px 0px 8px 0px;
 	max-width:800px;
+	/* box-shadow:0px 0px 5px #BBBBBB; */
 }
 
 .dBox > h2 {
 	margin:-6px -10px 4px -10px;
 	padding:6px 10px;
-	background-color:#EEEEEE;
+	background-color:#DDDDDD;
+	color:#333333;
 }
 
 .dBox > h2 > img {
@@ -1189,16 +1190,6 @@ div.dFolders { border:1px solid #BBBBBB; width:400px; height:300px; overflow:aut
 
 .ulTabs > li:hover {
 	background: linear-gradient(to bottom, #DDDDDD 0%, #CCCCCC 100%);
-}
-
-.ulTabs > li:first-child {
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-
-.ulTabs > li:last-child {
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
 }
 
 .ulTabs > li+li { border-left:none; }
@@ -1633,12 +1624,12 @@ footer {
 .dPopup > h2 {
 	margin:-8px -10px 4px -10px;
 	padding:8px 10px;
-	background-color:#F2F2F2;
+	background-color:#E6E6E6;
 	cursor:default;
 }
 
 .dPopupClose {
-	border-left:1px solid #DDDDDD;
+	border-left:1px solid #CCCCCC;
 	font-size:1.2em;
 	position:absolute;
 	top:0px;
@@ -1653,7 +1644,7 @@ footer {
 	font-size:1.2em;
 }
 .dPopupClose:hover {
-	background-color:#DDDDDD;
+	background-color:#CCCCCC;
 }
 
 .dPopupData > iframe {
