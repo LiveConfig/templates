@@ -1,11 +1,11 @@
 @font-face {
 	font-family:"lcicons";
-	src:url("lcicons.eot?v6");
-	src:url("lcicons.eot?v6#iefix") format("embedded-opentype"),
-		url("lcicons.ttf?v6") format("truetype"),
-		url("lcicons.woff2?v6") format("woff2"),
-		url("lcicons.woff?v6") format("woff"),
-		url("lcicons.svg?v6#lcicons") format("svg");
+	src:url("lcicons.eot?v7");
+	src:url("lcicons.eot?v7#iefix") format("embedded-opentype"),
+		url("lcicons.ttf?v7") format("truetype"),
+		url("lcicons.woff2?v7") format("woff2"),
+		url("lcicons.woff?v7") format("woff"),
+		url("lcicons.svg?v7#lcicons") format("svg");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -27,6 +27,11 @@
 
 
 /* Icons */
+
+
+.ico-backup:before {
+	content:"\2357";
+}
 
 
 .ico-box-checked:before {
@@ -139,6 +144,11 @@
 }
 
 
+.ico-facebook-box:before {
+	content:"\f10d";
+}
+
+
 .ico-file-document:before {
 	content:"\1f5ce";
 }
@@ -146,6 +156,11 @@
 
 .ico-file-multiple:before {
 	content:"\1f5d0";
+}
+
+
+.ico-github-circle:before {
+	content:"\f10e";
 }
 
 
@@ -165,7 +180,7 @@
 
 
 .ico-logout:before {
-	content:"\f10d";
+	content:"\f10f";
 }
 
 
@@ -180,12 +195,17 @@
 
 
 .ico-sitemap:before {
-	content:"\f10e";
+	content:"\f110";
+}
+
+
+.ico-twitter:before {
+	content:"\f111";
 }
 
 
 .ico-xml:before {
-	content:"\f10f";
+	content:"\f112";
 }
 
 
@@ -205,7 +225,7 @@
 
 
 .ico-auto-fix:before, .ico-random:before {
-	content:"\f110";
+	content:"\f113";
 }
 
 
@@ -215,12 +235,12 @@
 
 
 .ico-clipboard-text:before {
-	content:"\f111";
+	content:"\f114";
 }
 
 
 .ico-clock:before {
-	content:"\f112";
+	content:"\f115";
 }
 
 
@@ -275,7 +295,7 @@
 
 
 .ico-folder-outline:before {
-	content:"\f113";
+	content:"\f116";
 }
 
 
@@ -285,7 +305,7 @@
 
 
 .ico-information:before {
-	content:"\f114";
+	content:"\f117";
 }
 
 
@@ -295,12 +315,12 @@
 
 
 .ico-menu-down:before {
-	content:"\f115";
+	content:"\f118";
 }
 
 
 .ico-menu-up:before {
-	content:"\f116";
+	content:"\f119";
 }
 
 
@@ -315,7 +335,7 @@
 
 
 .ico-open-in-new:before {
-	content:"\f117";
+	content:"\f11a";
 }
 
 
@@ -356,6 +376,11 @@
 
 .ico-skip-previous:before {
 	content:"\23ee";
+}
+
+
+.ico-star-outline:before {
+	content:"\f11b";
 }
 
 
