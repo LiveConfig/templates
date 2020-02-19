@@ -1,11 +1,11 @@
 @font-face {
 	font-family:"lcicons";
-	src:url("lcicons.eot?v7");
-	src:url("lcicons.eot?v7#iefix") format("embedded-opentype"),
-		url("lcicons.ttf?v7") format("truetype"),
-		url("lcicons.woff2?v7") format("woff2"),
-		url("lcicons.woff?v7") format("woff"),
-		url("lcicons.svg?v7#lcicons") format("svg");
+	src:url("lcicons.eot?v8");
+	src:url("lcicons.eot?v8#iefix") format("embedded-opentype"),
+		url("lcicons.ttf?v8") format("truetype"),
+		url("lcicons.woff2?v8") format("woff2"),
+		url("lcicons.woff?v8") format("woff"),
+		url("lcicons.svg?v8#lcicons") format("svg");
 	font-weight:normal;
 	font-style:normal;
 }
@@ -79,6 +79,11 @@
 }
 
 
+.ico-linux:before {
+	content:"\1f427";
+}
+
+
 .ico-list-more:before {
 	content:"\2335";
 }
@@ -94,6 +99,11 @@
 }
 
 
+.ico-medical:before {
+	content:"\1f489";
+}
+
+
 .ico-php-code:before {
 	content:"\f107";
 }
@@ -101,6 +111,11 @@
 
 .ico-question:before {
 	content:"\f108";
+}
+
+
+.ico-shopping-cart:before {
+	content:"\1f6d2";
 }
 
 
